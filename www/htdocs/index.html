@@ -98,15 +98,31 @@
   <body>
     <textarea id="source">
 
+---
+
+class: pic
+
+![Compose Logo](Compose.png)
+
+---
+
 class: title
 
-# Docker <br/> Orchestration <br/> Workshop
+# Docker Compose <br/> Workshop
+
+
+## presented by LOVOO PaaS - The Platform Team 
+## supported by LOVOO Operations
+
+### based on/forked from the <i>Docker Orchestration Workshop by Jérôme Petazzoni</i>
 
 ---
 
 ## Logistics
 
-- Hello! We're `jerome at docker dot com` and `aj at soulshake dot net`
+- Hello! We're
+  - `marius.tolzmann at lovoo dot com`
+  - whoever
 
 <!--
 Reminder, when updating the agenda: when people are told to show
@@ -117,7 +133,6 @@ at e.g. 9am, and start at 9:30.
 -->
 
 - Agenda:
-
 .small[
 - 08:00-09:00 hello and breakfast
 - 09:00:10:25 part 1
@@ -139,8 +154,8 @@ Remember to change:
 - the "tweet my speed" hashtag in DockerCoins HTML
 -->
 
-- Experimental chat support on
-  [Gitter](http://container.training/chat)
+- Experimental chat support on Hipchat Channel:
+  - `Docker-Compose-Workshop`
 
 ---
 
@@ -222,13 +237,10 @@ grep '^# ' index.html | grep -v '<br' | tr '#' '-'^C
 ## Nice-to-haves
 
 - [GitHub](https://github.com/join) account
-  <br/>(if you want to fork the repo; also used to join Gitter)
-
-- [Gitter](https://gitter.im/) account
-  <br/>(to join the conversation during the workshop)
+  <br/>(if you want to fork the repo)
 
 - [Docker Hub](https://hub.docker.com) account
-  <br/>(it's one way to distribute images on your Swarm cluster)
+  <br/>(it's one way to distribute images on your cluster)
 
 ---
 
@@ -245,15 +257,14 @@ grep '^# ' index.html | grep -v '<br' | tr '#' '-'^C
 .exercise[
 
 - This is the stuff you're supposed to do!
-- Go to [container.training](http://container.training/) to view these slides
-- Join the chat room on
-  [Gitter](http://container.training/chat)
+- Go to [lovoo.training/docker-compose](http://container.training/docker-compose) to view these slides
+- Join the chat room in Hipchat
 
 ]
 
 ---
 
-# VM environment
+# VM environment - powered by LOVOO Operations
 
 - Each person gets 5 private VMs (not shared with anybody else)
 - They'll be up until tomorrow
@@ -282,8 +293,9 @@ wait
 ```
 -->
 
-- Log into the first VM (`node1`)
-- Check that you can SSH (without password) to `node2`:
+- Log into the first VM (`node1`) usign the IP Adress of `node1`
+
+- Check that you can SSH (without password) from `node1` to `node2`:
   ```bash
   ssh node2
   ```
@@ -5754,7 +5766,7 @@ Check that the container is up and running.
     <br/>(manage your Docker nodes from a SAAS portal)
 
   - Docker Datacenter
-    <br/>(buzzword-compliant management solution:
+    <br/>(buzzword-compliant manageme nt solution:
     <br/>turnkey, enterprise-class, on-premise, etc.)
 
 ---
